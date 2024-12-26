@@ -15,7 +15,12 @@
         }
         #timer {
             font-size: 48px;
-            color: #467;
+            color: #;
+            background:#267;
+            border-top-left-radius:60px;
+            border-bottom-left-radius:60px;
+            border-bottom-right-radius:60px;
+            width:270px;
 }
 font{
   Color:orangered;
@@ -34,6 +39,37 @@ a:visited{
   color:#030510;
 }
 
+
+
+.moving-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative; /* Required for animation */
+    animation: moveButton 1s linear ; /* Animation for 5 seconds */
+}
+
+@keyframes moveButton {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(60px); /* Move right */
+    }
+    50% {
+        transform: translateX(200); /* Move back to original position */
+    }
+    75% {
+        transform: translateX(100px); /* Move left */
+    }
+    100% {
+        transform: translateX(0); /* Move back to original position */
+    }
+}
 
 
 80%{
@@ -161,11 +197,14 @@ a:visited{
      	 <center>
 <h1><font>G</font>IVEAWAY COUNTDOW<font>N</font></h1>
 <div id="timer">00:00:00</div>
-  <br> <br> <br> 
-<a href="index.html"><img src="gift.png" width="80px"> </a>
+  <br> <br> <br> <center>
+<a href="index.html"><img src="gift.png" width="80px" > </a>
 <a href="index.html"><img src="gift.png" width="80px"> </a>
 <img src="gift.png" width="80px">
-  <a href="index.html"> click me</a>
+<br> <br>
+<br> <br>
+  <button class="moving-button">PARTICIPATE!!</button>
+
   <script>
     // Set the countdown duration in seconds (e.g., 3600 seconds = 1 hour)
     const countdownDuration = 3600; // Change this value as needed
@@ -207,4 +246,4 @@ a:visited{
 </script>
 
 </body>
-</html>
+  </html>
